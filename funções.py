@@ -7,7 +7,7 @@ def clear():
 def exibir(tab):
     for l in range(0,3):
         for c in range(0,3):
-            print(tab[l][c], end = '/')
+            print(tab[l][c], end = ' ')
         print()
 
 
@@ -26,6 +26,28 @@ def bot(tab):
 
 
 def win(tab):
-    if tab[0][0] and tab[1][1] and tab[2][2] == 'X':
-        return '\nwin(x)\n'
+    if tab[0][0] == 'X' and tab[1][1] == 'X' and tab[2][2] == 'X':   #} vecer na diagonal(\)
+        return 'Win(X)'
 
+    elif tab[2][0] == 'X' and tab[1][1] == 'X' and tab[0][2] == 'X': #} vender na diagonal (/)
+        return 'Win(X)'
+    
+    elif tab[0][0] == 'X' and tab[1][0] == 'X' and tab[2][0] == 'X': #} vencer em fila(---)
+        return 'Win(X)' 
+
+    elif tab[0][2] == 'X' and tab[1][2] == 'X' and tab[2][2] == 'X':#} vencer em fila(  |)
+        return 'Win(X)'
+
+    elif tab[1][0] == 'X' and tab[1][1] == 'X' and tab[1][2] == 'X': #} vencer em fima(meio(--))
+        return 'Win(X)'
+
+    elif tab[2][0] == 'X' and tab[2][1] == 'X' and tab[2][2] == 'X': #} vencer em fila(___)
+        return 'Win(X)'
+
+    elif tab[0][1] == 'X' and tab[1][1] == 'X' and tab[2][1] == 'X':
+        return 'Win(X)'
+
+
+    
+
+    

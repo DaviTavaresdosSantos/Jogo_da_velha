@@ -1,8 +1,8 @@
 from funções import clear,exibir,bot,win
 
-tabuleiro = [[' ',' ',' '],
-             [' ',' ',' '],
-             [' ',' ',' ']]
+tabuleiro = [['/','/','/'],
+             ['/','/','/'],
+             ['/','/','/']]
 
 exibir(tabuleiro)
 
@@ -17,12 +17,18 @@ while True:
         if tabuleiro[linha][coluna]  != 'X' and  tabuleiro[linha][coluna] != 'O': 
             tabuleiro[linha][coluna] = 'X'
 
-            bot(tab = tabuleiro)
+        
+            # bot(tab = tabuleiro)
             exibir(tabuleiro)
+
 
             if win(tab= tabuleiro):
                 print(win(tabuleiro))
                 break
+            
+
+                
+            
                
 
 
